@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #1e3a8a; /* Dark blue */
+  color: #fff;
+  padding: 30px 20px;
+  width: 260px;
+  text-align: center;
+  border-right: 2px solid #14234d;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-top: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+
+.sidebar a {
+  color: #bbdefb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #fff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 50px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px 25px;
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.2s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.main-content h2 {
+  color: #1e3a8a;
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 6px;
+  margin-top: 25px;
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #1e3a8a;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 6px;
+}
+
+.btn:hover {
+  background: #0f172a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #14234d;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
+

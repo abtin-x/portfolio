@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abtin Jaberi - Computer Science Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <aside class="sidebar">
+      <img src="photo.jpg" alt="Profile photo of Abtin" class="profile-pic">
+      <h1>Abtin Jaberi</h1>
+      <p>Master Student in Computer Science</p>
+
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:abtinjaberi@gmail.com">abtinjaberi@gmail.com</a></p>
+      <p><a href="https://github.com/abtin-x" target="_blank">GitHub</a></p>
+      <p><a href="http://linkedin.com/in/abtin-jaberi-42371319a" target="_blank">LinkedIn</a></p>
+
+      <h2>Languages</h2>
+      <ul>
+        <li>English – Fluent</li>
+        <li>Farsi – Fluent</li>
+        <li>German – Intermediate</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+
+      <section class="card">
+        <h2>About Me</h2>
+        <p>
+          I am a Master's student in Computer Science with a strong interest in 
+          software engineering, web development, and cybersecurity. 
+          I enjoy solving complex problems and building practical applications.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Bachelor of Computer Science</strong> – Eastern Mediterranean University, 2022</li>
+          <li><strong>Master of Computer Science</strong> – University of Bayreuth (Expected 2027)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li>Programming: Python, JavaScript, Java</li>
+          <li>Web Development: HTML, CSS, React</li>
+          <li>Databases: MySQL, MongoDB</li>
+          <li>Version Control: Git, GitHub</li>
+          <li>Operating Systems: Linux, Windows</li>
+          <li>Cybersecurity: Network Security, Threat Analysis</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Projects</h2>
+        <ol>
+          <li>
+            <strong>Online Market Platform</strong> – MERN Stack project with payments & chat  
+            <br><small>(Implemented JWT authentication & PayPal integration)</small>
+          </li>
+          <li>
+            <strong>Phishing Detection AI</strong> – ML project for cybersecurity
+          </li>
+          <li>
+            <strong>Portfolio Website</strong> – This site you are reading!
+          </li>
+        </ol>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
+
